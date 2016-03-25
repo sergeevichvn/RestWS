@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app>
+	<head>
+		<title>Hello AngularJS</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    	<script src="hello.js"></script>
+	</head>
+
+	<body>
+		<div ng-controller="Hello">
+                    
+                    Please enter id of country: <input ng-model="id"> <button ng-click="getCountry()" ng-enter="getCountry()">Get</button>
+                    <p>Название: {{country.name}} </p>
+                    <p>Население: {{country.population}} </p>
+
+                    <button ng-click="top5()" ng-enter="top5()">Get TOP5</button>
+                    <li ng-repeat="country in countries">
+                        <b>{{country.name}}</b>: {{country.population}} ;
+                    </li>
+                    <br/>
+                    <button ng-click="all()" ng-enter="all()">Get all countries</button>
+                    <li ng-repeat="country in allcountries">
+                        <b>{{country.name}}</b>: {{country.population}} ;
+                    </li>
+		</div>
+	</body>
+</html>
